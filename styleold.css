@@ -1,0 +1,38 @@
+.kakka {
+    size: 100%;
+}
+
+.title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font:bolder;
+    text-align: center;
+    font-size:100;
+    padding-top: 10px;
+    background-color: gray;
+    color: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+
+.minititle {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font:bolder;
+    text-align: center;
+    font-size:20;
+    padding-top: 10px;
+    background-color: rgb(255, 145, 145);
+    max-width: 50%;
+    border-radius: 10%;
+}
+.div {
+    background-color: gray;
+    color: goldenrod;
+    width: 50%;
+    border-radius: 10px;
+    padding: 10px;
+}
+.section {
+    background-color: pink;
+}
+
+body {
+    background-color: #ff7e5f;
+}
