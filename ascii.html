@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII to Binary Converter</title>
+</head>
+<body>
+    <form action="#">
+        <input type="text" value="" placeholder="Type your text here" id="invoer">
+        <textarea id="result" placeholder="Binary result will appear here"></textarea>
+        <button type="submit" id="convertButton">Convert</button>
+    </form>
+
+    <script type="text/javascript">
+        // Function to convert text to binary
+        function textToBinary(text) {
+            return text.split('').map(function(char) {
+                return char.charCodeAt(0).toString(2).padStart(8, '0'); // Convert each character to binary
+            }).join(' ');
+        }
+
+        // Function to handle the translation
+        const translator = function() {
+            let inputValue = document.getElementById('invoer').value;
+            
+            // Convert input text to binary
+            if(inputValue) {
+                let binaryValue = textToBinary(inputValue);
+                document.getElementById("result").value = binaryValue; // Show binary in textarea
+            } else {
+                document.getElementById("result").value = "No input provided"; // Show if no input
+            }
+        }
+
+        // Add event listener to button to execute translation on click
+        document.getElementById("convertButton").addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent form submission
+            translator(); // Call the translation function
+        });
+
+    </script>
+</body>
+</html>

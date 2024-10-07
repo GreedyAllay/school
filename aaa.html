@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+$list = rand(0,100);
+$listlength = 1000;
+$n = 1;
+
+for($n = 0; $n < $listlength - 1; $n++){
+$list = (($list."". "<br>". $n. ", ". rand(0,100)));}
+ echo $list
+?> 
+
+</body>
+</html>
